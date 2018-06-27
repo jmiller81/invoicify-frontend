@@ -14,20 +14,13 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Admin</th>
+        <th>Username</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
         <td>{{user.id}}</td>
-        <td>{{user.first_name}}</td>
-        <td>{{user.last_name}}</td>
-        <td class="text-center">
-          <a class="btn btn-primary" [routerLink]="['/user/edit/', user.id]">Edit</a>&nbsp;
-          <button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button>
-        </td>
+        <td>{{user.username}}</td>
       </tr>
     </tbody>
   </table>

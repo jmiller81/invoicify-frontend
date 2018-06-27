@@ -1,3 +1,33 @@
-<p>
-  user-form works!
-</p>
+<section @fadeInAnimation>
+  <ol class="breadcrumb">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/company">Companies</a></li>
+      <li><a routerLink="/user">Users</a></li>
+      <li><a routerLink="/billing-record">Billing Records</a></li>
+      <li class="active">Manage User</li>
+  </ol>
+
+  <a class="btn btn-primary" routerLink="/user">Return to Users</a>
+
+  <h1>Manage Users</h1>
+
+  <app-status-message [successMessage]="successMessage" [errorMessage]="errorMessage"></app-status-message>
+
+  <form novalidate (ngSubmit)="saveUser(userForm)"  #companyForm="ngForm" class="form-horizontal">
+    <input [ngModel]="user?.id" ngModel #company_id="ngModel" type="hidden" name="id">
+    <div class="form-group">
+      <label for="username" class="col-sm-2 control-label">First Name</label>
+      <div class="col-sm-10">
+        <input [ngModel]="company?.username" ngModel #name="ngModel" type="text" class="form-control" id="username" name="username" placeholder="User Name" required minlength="2" maxlength="30">
+         <span *ngIf="formErrors.username" class="text-danger">
+          {{ formErrors.name }}
+        </span>
+      </div>
+    </div>
+     <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button [disabled]="!userForm.form.valid" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</section>

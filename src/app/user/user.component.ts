@@ -29,19 +29,5 @@ export class UserComponent implements OnInit {
         error =>  this.errorMessage = <any>error);
   }
 
-  deleteUser(id:number) {
-
-    let dialogRef = this.dialog.open(DeleteConfirmComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      if(result){
-        this.dataService.deleteRecord("user", id)
-          .subscribe(
-            user => {this.successMessage = "Record(s) deleted succesfully"; this.getUsers(); },
-            error =>  this.errorMessage = <any>error);
-      }
-    });
-  }
-
 }
 
