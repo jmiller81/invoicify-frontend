@@ -95,9 +95,9 @@ export class UserFormComponent implements OnInit {
 
   validationMessages = {
     'name': {
-      'required': 'Company name is required.',
-      'minlength': 'Company name must be at least 2 characters long.',
-      'maxlength': 'Company name cannot be more than 30 characters long.'
+      'required': 'User name is required.',
+      'minlength': 'User name must be at least 2 characters long.',
+      'maxlength': 'User name cannot be more than 30 characters long.'
     }
   };
 
