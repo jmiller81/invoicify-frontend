@@ -16,6 +16,8 @@ import { DeleteConfirmComponent } from './delete-confirm/delete-confirm.componen
 import { CompanyFormComponent } from './company-form/company-form.component';
 import { StatusMessageComponent } from './status-message/status-message.component';
 import { BillingRecordComponent } from './billing-record/billing-record.component';
+import { UserComponent } from './user/user.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { BillingRecordComponent } from './billing-record/billing-record.componen
     DeleteConfirmComponent,
     CompanyFormComponent,
     StatusMessageComponent,
-    BillingRecordComponent
+    BillingRecordComponent,
+    UserComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
